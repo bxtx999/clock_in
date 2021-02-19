@@ -48,13 +48,12 @@ def imageToCode(token: str, secret_id: str, secret_key: str):
         print(err)
 
 
-def _read_settings(settings: str = "settings.json"):
+def _read_settings(settings: str = "./conf/settings.json"):
     with open(settings, 'r') as f:
         try:
             data = json.load(f)
         except Exception as e:
             print(e)
-            pass
         return data
 
 
