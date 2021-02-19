@@ -248,7 +248,7 @@ def parse():
     parser.add_argument("--address", "-d", type=str, help="具体地址", default="湖南大学软件大楼")
     parser.add_argument("--username", "-s", type=str, help="学号")
     parser.add_argument("--password", "-p", type=str, help="密码")
-    parser.add_argument("--hour", "-t", type=int, default=9, help="打卡时间")
+    parser.add_argument("--hour", "-t", type=int, default=8, help="打卡时间")
     parser.add_argument("--minute", "-m", type=int, default=20, help="打卡时间")
     parser.add_argument("--secretid", "-i", type=str, help="腾讯云密钥id")
     parser.add_argument("--secretkey", "-k", type=str, help="腾讯云密钥key")
@@ -327,20 +327,20 @@ def get_config() -> Dict:
         city = config["city"]
         country = config["country"]
         address = config["address"]
-        hour = config["schedule"]["hour"] or 9
+        hour = config["schedule"]["hour"] or 8
         minute = config["schedule"]["minute"] or 20
         SecretId = config["SecretId"]
         SecretKey = config["SecretKey"]
     elif os.path.exists('settings.json'):
         print("正在使用 settings.json 中的配置\n")
-        config = json.loads(open('./settings.json', 'r').read())
+        config = json.loads(open('./conf/settings.json', 'r').read())
         studentID = config["studentID"]
         password = config["password"]
         province = config["province"]
         city = config["city"]
         country = config["country"]
         address = config["address"]
-        hour = config["schedule"]["hour"] or 9
+        hour = config["schedule"]["hour"] or 8
         minute = config["schedule"]["minute"] or 20
         SecretId = config["SecretId"]
         SecretKey = config["SecretKey"]
