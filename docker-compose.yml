@@ -1,0 +1,6 @@
+version: '3'
+services: 
+  build: .
+  volumes: 
+    - ./conf:/opt/conf/
+  command: python3 vps.py

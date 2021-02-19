@@ -1,0 +1,14 @@
+{
+  "studentID": "",
+  "password": "",
+  "province": "",
+  "city": "",
+  "country": "",
+  "address": "",
+  "SecretId": "",
+  "SecretKey": "",
+  "schedule": {
+    "hour": 8,
+    "minute": 20
+  }
+}
